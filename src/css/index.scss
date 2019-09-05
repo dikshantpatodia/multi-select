@@ -1,0 +1,73 @@
+@import 'common.scss';
+@import 'mixins.scss';
+
+.app {
+  @include flex(center, center);
+  width: 100%;
+  height: 100vh;
+}
+
+.select-container {
+  width: 320px;
+}
+
+.input {
+  padding: 4px 12px;
+  border: 0;
+  width: 320px;
+  height: 32px;
+  color: #333;
+  font-size: 14px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+  &:focus {
+    outline: none;
+  }
+}
+
+.dropdown-list {
+  margin-top: 8px;
+  border: 1px solid #DDD;
+  border-radius: 2px;
+  &__item {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    &:hover {
+      background-color: #EEE;
+    }
+  }
+}
+
+.dropdown-list {
+  &__container {
+    @include flex();
+    flex-wrap: wrap;
+    padding: 12px;
+    max-height: 120px;
+    overflow-y: scroll;
+  }
+  &__value {
+    @include flex(center);
+    margin: 0 6px 6px 0;
+    padding: 6px 6px 6px 12px;
+    border-radius: 2px;
+    background-color: #333;
+    color: #FFF;
+    font-size: 12px;
+    &-delete {
+      @include flex(center, center);
+      margin-left: 6px;
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.empty-state {
+  color: #AAA;
+  font-size: 14px;
+}
